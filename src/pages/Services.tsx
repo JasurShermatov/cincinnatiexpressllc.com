@@ -297,7 +297,7 @@ const Services = () => {
             <Button asChild size="lg" variant="secondary">
               <Link to="/contact">Request Quote</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button asChild size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-primary">
               <Link to="/faq">View FAQ</Link>
             </Button>
           </div>

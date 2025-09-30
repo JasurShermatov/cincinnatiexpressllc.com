@@ -91,7 +91,7 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section 
-        className="hero-section flex items-center justify-center relative bg-cover bg-center"
+        className="hero-section py-20 flex items-center justify-center relative bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="hero-overlay"></div>
@@ -212,7 +212,7 @@ const Home = () => {
             <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-6">
               <Link to="/contact">Request Quote</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-primary">
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-black  hover:text-primary">
               <Link to="/services">Learn More</Link>
             </Button>
           </div>

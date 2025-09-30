@@ -42,14 +42,18 @@
 
     /* Custom Trucking Theme Variables */
     --nav-height: 4rem;
-    --hero-gradient: linear-gradient(135deg, hsl(215 85% 35%) 0%, hsl(215 75% 45%) 100%);
+    --hero-gradient: linear-gradient(
+      135deg,
+      hsl(215 85% 35%) 0%,
+      hsl(215 75% 45%) 100%
+    );
     --section-padding: 5rem;
     --card-shadow: 0 4px 20px hsl(215 85% 35% / 0.1);
     --hero-shadow: 0 20px 50px hsl(215 85% 35% / 0.3);
-    
+
     /* Typography */
-    --font-heading: 'Inter', system-ui, sans-serif;
-    --font-body: 'Inter', system-ui, sans-serif;
+    --font-heading: "Inter", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, sans-serif;
 
     --sidebar-background: 0 0% 98%;
 
@@ -117,12 +121,23 @@
     font-family: var(--font-body);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
   }
 }
 
 @layer components {
+  /* Site frame to prevent excessive stretching on zoom-out */
+  #root {
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
   /* Hero Section Styling */
   .hero-section {
     background: var(--hero-gradient);
@@ -160,7 +175,7 @@
   }
 
   .nav-link::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -4px;
     left: 0;
@@ -191,7 +206,11 @@
 
   /* Testimonial Cards */
   .testimonial-card {
-    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--secondary)) 100%);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--accent)) 0%,
+      hsl(var(--secondary)) 100%
+    );
     border-left: 4px solid hsl(var(--primary));
   }
 
