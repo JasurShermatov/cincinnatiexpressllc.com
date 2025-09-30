@@ -26,12 +26,10 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Escape user-provided text for safe inclusion in Telegram HTML parse mode
-  const escapeHtml = (s: string) =>
+  const escapeHtml = (s) =>
     s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -39,7 +37,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Simple client-side rate limit to respect Telegram/anti-spam
     const MIN_SUBMIT_INTERVAL_MS = 12000; // 12 seconds between submissions
@@ -60,12 +58,8 @@ const Contact = () => {
     setIsSubmitting(true);
 
     // Telegram (primary) and EmailJS (secondary) configuration
-    const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN as
-      | string
-      | undefined;
-    const chatIdsCsv = import.meta.env.VITE_TELEGRAM_CHAT_IDS as
-      | string
-      | undefined; // comma-separated list
+    const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+    const chatIdsCsv = import.meta.env.VITE_TELEGRAM_CHAT_IDS; // comma-separated list
 
     try {
       const nowStr = new Date().toLocaleString();
@@ -88,9 +82,10 @@ const Contact = () => {
       ].join("\n");
 
       let delivered = false;
+      let partialFailure = false;
 
       // Helper: tiny delay between Telegram requests
-      const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+      const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
       // 1) Send to Telegram (multiple recipients) — sequential with tiny delay
       if (botToken && chatIdsCsv) {
@@ -100,31 +95,55 @@ const Contact = () => {
           .filter(Boolean);
         if (chatIds.length > 0) {
           const urlBase = `https://api.telegram.org/bot${botToken}/sendMessage`;
-          let allOk = true;
+          let successCount = 0;
+          let failCount = 0;
           for (const chat_id of chatIds) {
-            const resp = await fetch(urlBase, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                chat_id,
-                text,
-                parse_mode: "HTML",
-                disable_web_page_preview: true,
-              }),
-            });
-            if (!resp.ok) allOk = false;
+            try {
+              const resp = await fetch(urlBase, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  chat_id,
+                  text,
+                  parse_mode: "HTML",
+                  disable_web_page_preview: true,
+                }),
+              });
+
+              // Telegram can return HTTP 200 with JSON { ok: false, ... } on errors
+              let ok = false;
+              try {
+                const data = await resp.json();
+                ok = resp.ok && data?.ok === true;
+              } catch {
+                // If not JSON, fall back to HTTP status
+                ok = resp.ok;
+              }
+
+              if (ok) successCount++;
+              else failCount++;
+            } catch {
+              failCount++;
+            }
             // Small delay to stay well under Telegram constraints
             await sleep(350);
           }
-          delivered = allOk;
+          delivered = successCount > 0; // success if at least one recipient got it
+          partialFailure = delivered && failCount > 0;
+          if (partialFailure) {
+            console.warn(
+              `Telegram partial delivery: some recipients failed (success=${successCount}, failed=${failCount})`
+            );
+          }
         }
       }
       // Show result toasts and handle reset only on success
       if (delivered) {
         toast({
-          title: "Message sent",
-          description:
-            "Thanks! Your message has been received. We'll get back to you shortly.",
+          title: partialFailure ? "Message sent (partially)" : "Message sent",
+          description: partialFailure
+            ? "Your message was delivered to at least one recipient, though some recipients may not have received it."
+            : "Thanks! Your message has been received. We'll get back to you shortly.",
         });
         setFormData({ name: "", email: "", phone: "", message: "" });
         localStorage.setItem("contact_last_sent_at", String(Date.now()));
