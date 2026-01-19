@@ -173,19 +173,19 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (347) 327-5234",
+      value: "(513) 908-9066",
       description: "Call us for immediate assistance",
     },
     {
       icon: Mail,
       title: "Email",
-      value: "cincinnatiexpressllc@gmail.com",
+      value: "contact@cincinnatiexpressllc.com",
       description: "Send us your inquiry anytime",
     },
     {
       icon: MapPin,
       title: "Address",
-      value: "Lebanon, Ohio 45036",
+      value: "12132 S Pine Dr Apt 242, Sharonville, OH 45241",
       description: "Our headquarters location",
     },
     {
@@ -392,7 +392,7 @@ const Contact = () => {
                   </p>
                   <Button variant="destructive" size="sm">
                     <Phone className="h-4 w-4 mr-2" />
-                    Call Now: (347) 327-5234
+                    Call Now: (513) 908-9066
                   </Button>
                 </CardContent>
               </Card>
@@ -409,7 +409,7 @@ const Contact = () => {
               Our Location
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Cincinnati Express LLC is strategically located in Lebanon, Ohio,
+              Cincinnati Express LLC is strategically located in Sharonville, Ohio,
               providing excellent access to major highways and distribution
               networks.
             </p>
@@ -418,14 +418,14 @@ const Contact = () => {
           <Card className="overflow-hidden shadow-card max-w-4xl mx-auto">
             <div className="aspect-video bg-muted flex items-center justify-center">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196308.39209194604!2d-84.41142073632811!3d39.43527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884051b5ce3d8b83%3A0xd06e6fa8b9188ae1!2sLebanon%2C%20OH%2045036!5e0!3m2!1sen!2sus!4v1642688950000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49092.58461898!2d-84.43840!3d39.28840!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8840532e5e789d33%3A0x89f4b3dc7a1c8e47!2sSharonville%2C%20OH%2045241!5e0!3m2!1sen!2sus!4v1705680000000!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Cincinnati Express LLC Location"
+                title="Cincinnati Express LLC Location - Sharonville, OH"
               ></iframe>
             </div>
           </Card>
@@ -442,7 +442,7 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" variant="secondary">
-              <a href="tel:+13473275234">Call (347) 327-5234</a>
+              <a href="tel:+15139089066">Call (513) 908-9066</a>
             </Button>
             <Button
               asChild
@@ -450,7 +450,7 @@ const Contact = () => {
               variant="outline"
               className="border-white text-black hover:text-primary"
             >
-              <a href="mailto:cincinnatiexpressllc@gmail.com">Send Email</a>
+              <a href="mailto:contact@cincinnatiexpressllc.com">Send Email</a>
             </Button>
           </div>
         </div>

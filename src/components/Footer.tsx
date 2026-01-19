@@ -5,9 +5,7 @@ import {
   Phone,
   Mail,
   MapPin,
-  Facebook,
-  Linkedin,
-  Instagram,
+  Shield,
 } from "lucide-react";
 
 const Footer = () => {
@@ -22,14 +20,27 @@ const Footer = () => {
                 <Truck className="h-8 w-8" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">Cincinnati Express</h3>
+                <h3 className="text-xl font-bold">CINCINNATI EXPRESS</h3>
                 <p className="text-sm opacity-80">LLC</p>
               </div>
             </div>
             <p className="text-sm opacity-80 leading-relaxed">
-              Reliable trucking solutions across the USA. Founded by Jonibek
-              Shermatov in 2025.
+              Federally authorized motor carrier providing reliable trucking
+              and logistics services across the USA.
             </p>
+
+            {/* FMCSA Authority Badge */}
+            <div className="bg-primary-foreground/10 rounded-lg p-3">
+              <div className="flex items-center gap-2 mb-2">
+                <Shield className="h-4 w-4" />
+                <span className="text-xs font-medium">FMCSA Authorized</span>
+              </div>
+              <div className="text-xs space-y-1 opacity-90">
+                <p><strong>USDOT:</strong> 4377740</p>
+                <p><strong>MC:</strong> MC-1715581</p>
+                <p><strong>Authority:</strong> Property</p>
+              </div>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -66,13 +77,32 @@ const Footer = () => {
               >
                 Contact
               </Link>
-              <Link
-                to="/privacy"
-                className="text-sm opacity-80 hover:opacity-100 transition-opacity"
-              >
-                Privacy Policy
-              </Link>
             </nav>
+
+            {/* Legal Links */}
+            <div className="pt-2 border-t border-primary-foreground/20">
+              <h5 className="text-sm font-medium mb-2">Legal</h5>
+              <nav className="flex flex-col space-y-2">
+                <Link
+                  to="/privacy"
+                  className="text-sm opacity-80 hover:opacity-100 transition-opacity"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  to="/terms"
+                  className="text-sm opacity-80 hover:opacity-100 transition-opacity"
+                >
+                  Terms of Service
+                </Link>
+                <Link
+                  to="/cookies"
+                  className="text-sm opacity-80 hover:opacity-100 transition-opacity"
+                >
+                  Cookie Policy
+                </Link>
+              </nav>
+            </div>
           </div>
 
           {/* Services */}
@@ -92,56 +122,49 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Contact Info</h4>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 opacity-80" />
-                <span className="text-sm">+1 (347) 327-5234</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 opacity-80" />
-                <span className="text-sm">cincinnatiexpressllc@gmail.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-4 w-4 opacity-80" />
-                <span className="text-sm">Lebanon, Ohio 45036</span>
-              </div>
-            </div>
-
-            {/* Social Media */}
-            <div className="space-y-2">
-              <h5 className="text-sm font-medium">Follow Us</h5>
-              <div className="flex space-x-3">
-                <a
-                  href="#"
-                  className="p-2 bg-primary-foreground/10 rounded-lg hover:bg-primary-foreground/20 transition-colors"
-                >
-                  <Facebook className="h-4 w-4" />
-                </a>
-                <a
-                  href="#"
-                  className="p-2 bg-primary-foreground/10 rounded-lg hover:bg-primary-foreground/20 transition-colors"
-                >
-                  <Linkedin className="h-4 w-4" />
-                </a>
-                <a
-                  href="#"
-                  className="p-2 bg-primary-foreground/10 rounded-lg hover:bg-primary-foreground/20 transition-colors"
-                >
-                  <Instagram className="h-4 w-4" />
-                </a>
+              <a href="tel:+15139089066" className="flex items-center space-x-3 hover:opacity-100 opacity-90 transition-opacity">
+                <Phone className="h-4 w-4" />
+                <span className="text-sm">(513) 908-9066</span>
+              </a>
+              <a href="mailto:contact@cincinnatiexpressllc.com" className="flex items-center space-x-3 hover:opacity-100 opacity-90 transition-opacity">
+                <Mail className="h-4 w-4" />
+                <span className="text-sm">contact@cincinnatiexpressllc.com</span>
+              </a>
+              <div className="flex items-start space-x-3">
+                <MapPin className="h-4 w-4 mt-0.5" />
+                <span className="text-sm opacity-80">
+                  12132 S Pine Dr Apt 242<br />
+                  Sharonville, OH 45241, USA
+                </span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
-          <p className="text-sm opacity-80">
-            © 2025 Cincinnati Express LLC. All rights reserved. | Founder:
-            Jonibek Shermatov ·{" "}
-            <Link to="/privacy" className="underline hover:no-underline">
-              Privacy Policy
-            </Link>
-          </p>
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm opacity-80 text-center md:text-left">
+              © {new Date().getFullYear()} Cincinnati Express LLC. All rights reserved.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm opacity-80">
+              <span>USDOT: 4377740</span>
+              <span>|</span>
+              <span>MC: MC-1715581</span>
+              <span>|</span>
+              <Link to="/privacy" className="hover:opacity-100 hover:underline transition-opacity">
+                Privacy
+              </Link>
+              <span>|</span>
+              <Link to="/terms" className="hover:opacity-100 hover:underline transition-opacity">
+                Terms
+              </Link>
+              <span>|</span>
+              <Link to="/cookies" className="hover:opacity-100 hover:underline transition-opacity">
+                Cookies
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

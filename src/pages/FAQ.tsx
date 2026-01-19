@@ -8,8 +8,8 @@ const FAQ = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
+    setOpenItems(prev =>
+      prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
@@ -26,11 +26,11 @@ const FAQ = () => {
     },
     {
       question: "Which states do you currently serve?",
-      answer: "We are based in Lebanon, Ohio and are expanding across the USA. Currently, we serve Ohio and surrounding states with plans to cover most major routes nationwide. Our strategic location provides excellent access to major interstate corridors and distribution centers."
+      answer: "We are based in Sharonville, Ohio and provide services across the USA. Currently, we serve Ohio and surrounding states with nationwide coverage on major routes. Our strategic location in the Cincinnati metro area provides excellent access to major interstate corridors and distribution centers."
     },
     {
       question: "How do I request a shipping quote?",
-      answer: "Simply fill out our contact form with your shipping details, call us directly at +1 (347) 327-5234, or email us at cincinnatiexpressllc@gmail.com. We'll provide a personalized quote based on your specific needs, including pickup/delivery locations, cargo type, and timeline."
+      answer: "Simply fill out our contact form with your shipping details, call us directly at (513) 908-9066, or email us at contact@cincinnatiexpressllc.com. We'll provide a personalized quote based on your specific needs, including pickup/delivery locations, cargo type, and timeline."
     },
     {
       question: "Do you provide GPS tracking for shipments?",
@@ -38,7 +38,7 @@ const FAQ = () => {
     },
     {
       question: "Are your services available 24/7?",
-      answer: "Absolutely! Our customer support and trucking services are available 24/7 for urgent shipments and emergency logistics needs. We understand that business doesn't stop, and neither do we. Call us anytime at (347) 327-5234 for immediate assistance."
+      answer: "Absolutely! Our customer support and trucking services are available 24/7 for urgent shipments and emergency logistics needs. We understand that business doesn't stop, and neither do we. Call us anytime at (513) 908-9066 for immediate assistance."
     },
     {
       question: "Can you handle both small and large businesses?",
@@ -81,7 +81,7 @@ const FAQ = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-foreground mb-6">Frequently Asked Questions</h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Find answers to common questions about Cincinnati Express LLC's trucking and logistics services. 
+              Find answers to common questions about Cincinnati Express LLC's trucking and logistics services.
               Can't find what you're looking for? Contact us directly.
             </p>
           </div>
@@ -129,7 +129,7 @@ const FAQ = () => {
                         )}
                       </div>
                     </button>
-                    
+
                     {openItems.includes(index) && (
                       <div className="px-6 pb-6 border-t border-border">
                         <div className="pt-6">
@@ -177,7 +177,7 @@ const FAQ = () => {
                     Call us directly for urgent shipments or immediate assistance with your logistics needs.
                   </p>
                   <Button asChild size="lg" variant="outline">
-                    <a href="tel:+13473275234">Call (347) 327-5234</a>
+                    <a href="tel:+15139089066">Call (513) 908-9066</a>
                   </Button>
                 </CardContent>
               </Card>
@@ -192,10 +192,10 @@ const FAQ = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-foreground mb-6">Learn More About Our Services</h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Explore our comprehensive trucking solutions and discover how Cincinnati Express LLC 
+              Explore our comprehensive trucking solutions and discover how Cincinnati Express LLC
               can meet your logistics needs.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
                 <Link to="/services">View All Services</Link>
@@ -213,7 +213,7 @@ const FAQ = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Join the growing list of satisfied customers who trust Cincinnati Express LLC 
+            Join the growing list of satisfied customers who trust Cincinnati Express LLC
             for their trucking and logistics needs.
           </p>
           <Button asChild size="lg" variant="secondary">

@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
               Privacy Policy
             </h1>
             <p className="text-muted-foreground text-lg">
-              Last updated: September 30, 2025
+              Last updated: January 19, 2026
             </p>
           </div>
         </div>
@@ -58,116 +58,144 @@ const PrivacyPolicy = () => {
             <CardContent className="p-6 md:p-10">
               <div className="prose prose-slate dark:prose-invert max-w-none">
                 <p className="text-base leading-7">
-                  Cincinnati Express LLC ("we", "our", or "us") values your
-                  privacy. This Privacy Policy explains how we collect, use,
-                  disclose, and safeguard your information when you visit our
-                  website and use our services.
+                  Cincinnati Express LLC ("we", "our", or "us"), a federally authorized motor carrier (USDOT: 4377740, MC: MC-1715581), values your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at cincinnatiexpressllc.com (the "Website") and use our trucking and logistics services.
+                </p>
+                <p className="text-base leading-7">
+                  By using our Website or services, you consent to the practices described in this Privacy Policy. If you do not agree with these practices, please do not use our Website.
                 </p>
 
                 <h2 id="info-we-collect" className="scroll-mt-28">
                   Information We Collect
                 </h2>
+                <h3>Information You Provide</h3>
                 <ul>
-                  <li>Contact details: name, email address, phone number</li>
-                  <li>Messages you submit through our contact form</li>
-                  <li>
-                    Basic usage data such as pages visited and general
-                    device/browser info
-                  </li>
+                  <li><strong>Contact Information:</strong> Name, email address, phone number, and company name when you submit our contact form or request a quote</li>
+                  <li><strong>Communications:</strong> Messages, inquiries, and other content you submit through our contact form</li>
+                  <li><strong>Shipping Information:</strong> Pickup/delivery locations, cargo details, and timeline requirements when requesting quotes</li>
+                </ul>
+                <h3>Information Collected Automatically</h3>
+                <ul>
+                  <li><strong>Device Information:</strong> IP address, browser type, operating system, and device identifiers</li>
+                  <li><strong>Usage Data:</strong> Pages visited, time spent on pages, referring website, and navigation patterns</li>
+                  <li><strong>Cookies:</strong> We use cookies and similar technologies as described in our <a href="/cookies" className="text-primary hover:underline">Cookie Policy</a></li>
                 </ul>
 
                 <h2 id="how-we-use" className="scroll-mt-28">
                   How We Use Your Information
                 </h2>
+                <p>We use the information we collect for the following purposes:</p>
                 <ul>
-                  <li>To respond to inquiries and provide customer support</li>
-                  <li>To provide quotes and logistics services you request</li>
-                  <li>To improve our website experience and service quality</li>
+                  <li><strong>Service Delivery:</strong> To respond to your inquiries, provide shipping quotes, and deliver our trucking and logistics services</li>
+                  <li><strong>Customer Support:</strong> To communicate with you about your requests, shipments, and provide assistance</li>
+                  <li><strong>Business Operations:</strong> To manage our business relationship with you and fulfill our contractual obligations</li>
+                  <li><strong>Website Improvement:</strong> To analyze usage patterns and improve our Website functionality and user experience</li>
+                  <li><strong>Legal Compliance:</strong> To comply with applicable laws, regulations, and legal processes, including FMCSA requirements</li>
+                  <li><strong>Safety and Security:</strong> To protect against fraud, unauthorized access, and other security threats</li>
                 </ul>
 
                 <h2 id="sharing" className="scroll-mt-28">
                   Sharing of Information
                 </h2>
                 <p>
-                  We do not sell your personal information. We may share
-                  information with trusted service providers who assist in
-                  operating our website and conducting our business (for
-                  example, email delivery providers), under confidentiality
-                  obligations.
+                  <strong>We do not sell your personal information.</strong> We may share your information only in the following limited circumstances:
+                </p>
+                <ul>
+                  <li><strong>Service Providers:</strong> With trusted third-party service providers who assist in operating our Website (hosting, analytics) and conducting our business (communication tools), under strict confidentiality obligations</li>
+                  <li><strong>Legal Requirements:</strong> When required by law, regulation, legal process, or governmental request, including FMCSA or DOT requirements</li>
+                  <li><strong>Business Protection:</strong> To protect the rights, property, or safety of Cincinnati Express LLC, our customers, or others</li>
+                  <li><strong>Business Transfers:</strong> In connection with any merger, acquisition, or sale of company assets, with appropriate notice</li>
+                </ul>
+                <p className="mt-4 p-4 bg-accent/30 rounded-lg">
+                  <strong>Phone Number Protection:</strong> Phone numbers collected through our contact form are used solely to respond to your inquiries and provide customer service. We do not share, sell, or rent phone numbers to third parties for marketing purposes.
                 </p>
 
                 <h2 id="retention" className="scroll-mt-28">
                   Data Retention
                 </h2>
                 <p>
-                  We retain personal information only as long as necessary to
-                  fulfill the purposes outlined in this policy unless a longer
-                  retention period is required by law.
+                  We retain personal information only as long as necessary to fulfill the purposes outlined in this policy, typically:
+                </p>
+                <ul>
+                  <li><strong>Contact form submissions:</strong> Up to 3 years for customer service and business records</li>
+                  <li><strong>Quote requests:</strong> Up to 5 years for business and legal compliance purposes</li>
+                  <li><strong>Website usage data:</strong> Up to 26 months for analytics purposes</li>
+                </ul>
+                <p>
+                  Longer retention periods may apply when required by law or for legitimate business purposes such as resolving disputes or enforcing agreements.
                 </p>
 
                 <h2 id="your-choices" className="scroll-mt-28">
                   Your Choices
                 </h2>
+                <p>You have the following rights regarding your personal information:</p>
                 <ul>
-                  <li>
-                    You may request access, correction, or deletion of your
-                    personal information
-                  </li>
-                  <li>
-                    You may opt out of non-essential communications at any time
-                  </li>
+                  <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
+                  <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
+                  <li><strong>Deletion:</strong> Request deletion of your personal information, subject to legal retention requirements</li>
+                  <li><strong>Opt-Out:</strong> Opt out of non-essential communications at any time</li>
                 </ul>
+                <p>
+                  To exercise any of these rights, please contact us at contact@cincinnatiexpressllc.com or call (513) 908-9066.
+                </p>
 
                 <h2 id="security" className="scroll-mt-28">
                   Security
                 </h2>
                 <p>
-                  We implement reasonable physical, administrative, and
-                  technical safeguards designed to protect your information.
-                  However, no method of transmission over the Internet is 100%
-                  secure.
+                  We implement reasonable physical, administrative, and technical safeguards designed to protect your information, including:
+                </p>
+                <ul>
+                  <li>SSL/TLS encryption for data transmission</li>
+                  <li>Secure hosting infrastructure</li>
+                  <li>Access controls and authentication measures</li>
+                  <li>Regular security assessments</li>
+                </ul>
+                <p>
+                  However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.
                 </p>
 
                 <h2 id="children" className="scroll-mt-28">
                   Children's Privacy
                 </h2>
                 <p>
-                  Our services are not directed to children under 13, and we do
-                  not knowingly collect personal information from children.
+                  Our Website and services are not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately at contact@cincinnatiexpressllc.com, and we will take steps to delete such information.
                 </p>
 
                 <h2 id="intl" className="scroll-mt-28">
                   International Users
                 </h2>
                 <p>
-                  If you access our website from outside the United States, you
-                  understand your information may be processed in the U.S. where
-                  data protection laws may differ from your jurisdiction.
+                  Cincinnati Express LLC is based in the United States and our services are primarily offered within the USA. If you access our Website from outside the United States, please be aware that your information may be transferred to, stored, and processed in the United States where data protection laws may differ from those in your jurisdiction. By using our Website, you consent to such transfer and processing.
                 </p>
 
                 <h2 id="changes" className="scroll-mt-28">
                   Changes to This Policy
                 </h2>
                 <p>
-                  We may update this Privacy Policy from time to time. Updates
-                  will be posted on this page with a revised "Last updated"
-                  date.
+                  We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes, we will:
+                </p>
+                <ul>
+                  <li>Update the "Last updated" date at the top of this policy</li>
+                  <li>Post the revised policy on this page</li>
+                  <li>Take reasonable steps to notify you of significant changes</li>
+                </ul>
+                <p>
+                  We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.
                 </p>
 
                 <h2 id="contact" className="scroll-mt-28">
                   Contact Us
                 </h2>
                 <p>
-                  If you have questions or requests concerning this Privacy
-                  Policy, contact us at:
+                  If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
                 </p>
                 <ul>
-                  <li>
-                    <strong>Email:</strong> cincinnatiexpressllc@gmail.com
-                  </li>
-                  <li>
-                    <strong>Phone:</strong> +1 (347) 327-5234
-                  </li>
+                  <li><strong>Company:</strong> Cincinnati Express LLC</li>
+                  <li><strong>USDOT:</strong> 4377740</li>
+                  <li><strong>MC Number:</strong> MC-1715581</li>
+                  <li><strong>Address:</strong> 12132 S Pine Dr Apt 242, Sharonville, OH 45241, USA</li>
+                  <li><strong>Phone:</strong> (513) 908-9066</li>
+                  <li><strong>Email:</strong> contact@cincinnatiexpressllc.com</li>
                 </ul>
               </div>
             </CardContent>
@@ -211,16 +239,16 @@ const PrivacyPolicy = () => {
                 </p>
                 <div className="space-y-2 text-sm">
                   <a
-                    href="mailto:cincinnatiexpressllc@gmail.com"
+                    href="mailto:contact@cincinnatiexpressllc.com"
                     className="inline-flex items-center gap-2 hover:underline"
                   >
-                    <Mail className="h-4 w-4" /> cincinnatiexpressllc@gmail.com
+                    <Mail className="h-4 w-4" /> contact@cincinnatiexpressllc.com
                   </a>
                   <a
-                    href="tel:+13473275234"
+                    href="tel:+15139089066"
                     className="inline-flex items-center gap-2 hover:underline"
                   >
-                    <Phone className="h-4 w-4" /> +1 (347) 327-5234
+                    <Phone className="h-4 w-4" /> (513) 908-9066
                   </a>
                 </div>
               </CardContent>

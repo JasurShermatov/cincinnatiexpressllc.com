@@ -38,9 +38,8 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`nav-link text-sm font-medium ${
-                  isActive(item.path) ? 'text-primary' : 'text-foreground'
-                }`}
+                className={`nav-link text-sm font-medium ${isActive(item.path) ? 'text-primary' : 'text-foreground'
+                  }`}
               >
                 {item.name}
               </Link>
@@ -51,12 +50,12 @@ const Navigation = () => {
           <div className="flex items-center space-x-4">
             <div className="hidden lg:flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="h-4 w-4" />
-              <span>(347) 327-5234</span>
+              <span>(513) 908-9066</span>
             </div>
             <Button asChild className="hidden md:flex">
               <Link to="/contact">Get Quote</Link>
             </Button>
-            
+
             {/* Mobile Menu Button */}
             <button
               className="md:hidden p-2"
@@ -80,9 +79,8 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`block text-base font-medium ${
-                    isActive(item.path) ? 'text-primary' : 'text-foreground'
-                  }`}
+                  className={`block text-base font-medium ${isActive(item.path) ? 'text-primary' : 'text-foreground'
+                    }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -91,7 +89,7 @@ const Navigation = () => {
               <div className="pt-4 border-t border-border">
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-4">
                   <Phone className="h-4 w-4" />
-                  <span>(347) 327-5234</span>
+                  <span>(513) 908-9066</span>
                 </div>
                 <Button asChild className="w-full">
                   <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
