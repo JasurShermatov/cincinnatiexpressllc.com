@@ -84,7 +84,7 @@ const Footer = () => {
               <h5 className="text-sm font-medium mb-2">Legal</h5>
               <nav className="flex flex-col space-y-2">
                 <Link
-                  to="/privacy"
+                  to="/privacy-policy"
                   className="text-sm opacity-80 hover:opacity-100 transition-opacity"
                 >
                   Privacy Policy
@@ -93,7 +93,13 @@ const Footer = () => {
                   to="/terms"
                   className="text-sm opacity-80 hover:opacity-100 transition-opacity"
                 >
-                  Terms of Service
+                  Terms & Conditions
+                </Link>
+                <Link
+                  to="/sms-terms"
+                  className="text-sm opacity-80 hover:opacity-100 transition-opacity"
+                >
+                  SMS Terms
                 </Link>
                 <Link
                   to="/cookies"
@@ -133,8 +139,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 mt-0.5" />
                 <span className="text-sm opacity-80">
-                  12132 S Pine Dr Apt 242<br />
-                  Sharonville, OH 45241, USA
+                  12132 S PINE DR APT 242<br />
+                  SHARONVILLE, OH 45241, USA
                 </span>
               </div>
             </div>
@@ -152,12 +158,16 @@ const Footer = () => {
               <span>|</span>
               <span>MC: MC-1715581</span>
               <span>|</span>
-              <Link to="/privacy" className="hover:opacity-100 hover:underline transition-opacity">
+              <Link to="/privacy-policy" className="hover:opacity-100 hover:underline transition-opacity">
                 Privacy
               </Link>
               <span>|</span>
               <Link to="/terms" className="hover:opacity-100 hover:underline transition-opacity">
-                Terms
+                Terms & Conditions
+              </Link>
+              <span>|</span>
+              <Link to="/sms-terms" className="hover:opacity-100 hover:underline transition-opacity">
+                SMS Terms
               </Link>
               <span>|</span>
               <Link to="/cookies" className="hover:opacity-100 hover:underline transition-opacity">

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import {
   Phone,
@@ -23,7 +24,9 @@ const Contact = () => {
     phone: "",
     message: "",
   });
+  const [smsConsent, setSmsConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const consentTextVersion = "sms-consent-v1-2026-01-20";
 
   // Escape user-provided text for safe inclusion in Telegram HTML parse mode
   const escapeHtml = (s) =>
@@ -63,10 +66,24 @@ const Contact = () => {
 
     try {
       const nowStr = new Date().toLocaleString();
+      const consentTimestamp = new Date().toISOString();
+      const pageUrl = typeof window !== "undefined" ? window.location.href : "unavailable";
+      let ipAddress = "unavailable";
+      try {
+        const ipResp = await fetch("https://api.ipify.org?format=json");
+        if (ipResp.ok) {
+          const ipData = await ipResp.json();
+          if (ipData?.ip) ipAddress = ipData.ip;
+        }
+      } catch {
+        // ignore IP lookup errors; keep default
+      }
+
       const name = escapeHtml(formData.name || "");
       const email = escapeHtml(formData.email || "");
       const phone = escapeHtml(formData.phone || "—");
       const msg = escapeHtml(formData.message || "");
+      const smsStatus = smsConsent ? "Opted in (OK to text)" : "Not opted in (do not text)";
       const text = [
         `🧾 <b>New Website Contact</b>`,
         `🕒 <b>Time:</b> ${escapeHtml(nowStr)}`,
@@ -79,6 +96,11 @@ const Contact = () => {
         msg,
         `────────────`,
         `🌐 Via website contact form`,
+        `📲 <b>SMS Consent:</b> ${escapeHtml(smsStatus)}`,
+        `🔖 <b>Consent text version:</b> ${escapeHtml(consentTextVersion)}`,
+        `🕒 <b>Consent timestamp (UTC):</b> ${escapeHtml(consentTimestamp)}`,
+        `🌐 <b>Page URL:</b> ${escapeHtml(pageUrl)}`,
+        `📍 <b>IP (best-effort):</b> ${escapeHtml(ipAddress)}`,
       ].join("\n");
 
       let delivered = false;
@@ -185,7 +207,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      value: "12132 S Pine Dr Apt 242, Sharonville, OH 45241",
+      value: "12132 S PINE DR APT 242, SHARONVILLE, OH 45241",
       description: "Our headquarters location",
     },
     {
@@ -295,6 +317,25 @@ const Contact = () => {
                         rows={6}
                         placeholder="Tell us about your shipping needs, including pickup/delivery locations, cargo type, timeline, and any special requirements..."
                       />
+                    </div>
+
+                    <div className="space-y-2">
+                      <div className="flex items-start space-x-3 rounded-lg border border-border/80 p-4 bg-accent/20">
+                        <Checkbox
+                          id="sms-consent"
+                          checked={smsConsent}
+                          onCheckedChange={(checked) => setSmsConsent(Boolean(checked))}
+                          aria-describedby="sms-consent-helper"
+                        />
+                        <div className="space-y-2">
+                          <Label htmlFor="sms-consent" className="font-medium">
+                            I agree to receive SMS/text messages from Cincinnati Express LLC about quotes, service updates, and customer support. Message & data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help. By opting in, you agree to our <a href="https://cincinnatiexpressllc.com/sms-terms" className="text-primary hover:underline" target="_blank" rel="noreferrer">SMS Terms</a> and <a href="https://cincinnatiexpressllc.com/privacy-policy" className="text-primary hover:underline" target="_blank" rel="noreferrer">Privacy Policy</a>. SMS consent is not shared or sold to third parties for marketing.
+                          </Label>
+                          <p id="sms-consent-helper" className="text-xs text-muted-foreground">
+                            If you do not check this box, we will not send SMS/text messages. We will respond by email or phone call if needed.
+                          </p>
+                        </div>
+                      </div>
                     </div>
 
                     <Button

@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 
 const sections = [
     { id: "acceptance", title: "Acceptance of Terms", icon: FileText },
-    { id: "use-of-website", title: "Use of Website", icon: Globe },
+    { id: "company", title: "Company & Services", icon: Shield },
+    { id: "permitted-use", title: "Eligibility & Permitted Use", icon: Globe },
+    { id: "communications", title: "Quotes & Communications", icon: Mail },
     { id: "intellectual-property", title: "Intellectual Property", icon: Shield },
-    { id: "disclaimer", title: "Disclaimer", icon: AlertTriangle },
+    { id: "disclaimer", title: "Disclaimers", icon: AlertTriangle },
     { id: "limitation", title: "Limitation of Liability", icon: Scale },
     { id: "third-party", title: "Third-Party Links", icon: Globe },
     { id: "governing-law", title: "Governing Law", icon: Scale },
@@ -20,8 +22,8 @@ const Terms = () => {
     return (
         <div className="min-h-screen pt-nav">
             <SEO
-                title="Terms of Service | Cincinnati Express LLC"
-                description="Read the Terms of Service for Cincinnati Express LLC website. Understand your rights and responsibilities when using our trucking and logistics services."
+                title="Terms & Conditions | Cincinnati Express LLC"
+                description="Terms & Conditions for using Cincinnati Express LLC's website and services. Understand permitted use, communications, and legal rights."
                 canonical={`${siteUrl}/terms`}
                 noIndex={false}
             />
@@ -34,10 +36,10 @@ const Terms = () => {
                             <Scale className="h-4 w-4" /> Legal
                         </div>
                         <h1 className="font-heading text-4xl md:text-5xl font-bold tracking-tight mb-4">
-                            Terms of Service
+                            Terms & Conditions
                         </h1>
                         <p className="text-muted-foreground text-lg">
-                            Last updated: January 19, 2026
+                            Last updated: January 20, 2026
                         </p>
                     </div>
                 </div>
@@ -51,93 +53,95 @@ const Terms = () => {
                         <CardContent className="p-6 md:p-10">
                             <div className="prose prose-slate dark:prose-invert max-w-none">
                                 <p className="text-base leading-7">
-                                    Welcome to the Cincinnati Express LLC website. These Terms of Service ("Terms") govern your access to and use of our website located at cincinnatiexpressllc.com (the "Website"). By accessing or using the Website, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the Website.
+                                    These Terms & Conditions ("Terms") govern your access to and use of the Cincinnati Express LLC website located at cincinnatiexpressllc.com (the "Website") and any related services offered by CINCINNATI EXPRESS LLC (USDOT 4377740, MC-1715581). By using the Website, you agree to these Terms and our linked policies. If you do not agree, please discontinue use immediately.
                                 </p>
 
                                 <h2 id="acceptance" className="scroll-mt-28">
                                     1. Acceptance of Terms
                                 </h2>
                                 <p>
-                                    By accessing and using this Website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our <Link to="/privacy" className="text-primary hover:underline">Privacy Policy</Link>. These Terms apply to all visitors, users, and others who access or use the Website.
+                                    By accessing or using the Website, you confirm you are at least 18 years old (or the age of majority in your jurisdiction) and capable of entering a binding agreement. These Terms incorporate our <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link> and <Link to="/sms-terms" className="text-primary hover:underline">SMS Terms</Link> by reference.
                                 </p>
 
-                                <h2 id="use-of-website" className="scroll-mt-28">
-                                    2. Use of Website
+                                <h2 id="company" className="scroll-mt-28">
+                                    2. Company & Services
                                 </h2>
-                                <p>You agree to use this Website only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+                                <p>
+                                    Cincinnati Express LLC provides trucking and logistics services across the United States. Information on the Website (including service descriptions, coverage areas, and contact details) is provided for general informational purposes and does not constitute a binding offer. Quotes and service commitments are confirmed only once you receive written confirmation from us.
+                                </p>
+
+                                <h2 id="permitted-use" className="scroll-mt-28">
+                                    3. Eligibility & Permitted Use
+                                </h2>
+                                <p>You agree to use the Website only for lawful business purposes. You will not:</p>
                                 <ul>
-                                    <li>Use the Website in any way that violates any applicable federal, state, local, or international law or regulation</li>
-                                    <li>Attempt to gain unauthorized access to any portion of the Website or any systems or networks connected to the Website</li>
-                                    <li>Use any robot, spider, or other automatic device to access the Website for any purpose without our express written permission</li>
-                                    <li>Introduce any viruses, Trojan horses, worms, or other material that is malicious or technologically harmful</li>
-                                    <li>Impersonate or attempt to impersonate Cincinnati Express LLC, a Cincinnati Express LLC employee, or any other person or entity</li>
+                                    <li>Violate applicable federal, state, or local laws and regulations</li>
+                                    <li>Misrepresent your identity or authority to act on behalf of another entity</li>
+                                    <li>Access or attempt to access non-public areas of the Website, servers, or related systems</li>
+                                    <li>Introduce malicious code or interfere with the Website’s operation or security</li>
+                                    <li>Use automated tools (scrapers, bots) without our prior written consent</li>
                                 </ul>
 
-                                <h2 id="intellectual-property" className="scroll-mt-28">
-                                    3. Intellectual Property
+                                <h2 id="communications" className="scroll-mt-28">
+                                    4. Quotes & Communications (Email/SMS)
                                 </h2>
                                 <p>
-                                    The Website and its entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio, and the design, selection, and arrangement thereof) are owned by Cincinnati Express LLC, its licensors, or other providers of such material and are protected by United States and international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.
+                                    By submitting a form, you authorize us to contact you regarding your inquiry via email or phone. SMS/text messages are only sent if you expressly opt in to receive them, and are governed by our <Link to="/sms-terms" className="text-primary hover:underline">SMS Terms</Link>. If you do not opt in, we will not send SMS/text messages to you. Message frequency varies; message and data rates may apply.
                                 </p>
+
+                                <h2 id="intellectual-property" className="scroll-mt-28">
+                                    5. Intellectual Property
+                                </h2>
                                 <p>
-                                    You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our Website without prior written consent from Cincinnati Express LLC.
+                                    All content on the Website—including text, graphics, logos, icons, images, audio, video, and software—is owned by Cincinnati Express LLC or its licensors and is protected by U.S. and international intellectual property laws. You may not copy, modify, distribute, publicly display, or create derivative works from the Website without our prior written consent.
                                 </p>
 
                                 <h2 id="disclaimer" className="scroll-mt-28">
-                                    4. Disclaimer of Warranties
+                                    6. Disclaimers
                                 </h2>
                                 <p>
-                                    THE WEBSITE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. CINCINNATI EXPRESS LLC DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
-                                </p>
-                                <p>
-                                    We do not warrant that the Website will be uninterrupted, timely, secure, or error-free. Information on the Website may be changed or updated without notice. Cincinnati Express LLC may also make improvements and/or changes to the Website at any time without notice.
+                                    THE WEBSITE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, OR NON-INFRINGEMENT. We do not warrant that the Website will be uninterrupted, secure, or free from errors or harmful components.
                                 </p>
 
                                 <h2 id="limitation" className="scroll-mt-28">
-                                    5. Limitation of Liability
+                                    7. Limitation of Liability
                                 </h2>
                                 <p>
-                                    TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL CINCINNATI EXPRESS LLC, ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:
+                                    TO THE MAXIMUM EXTENT PERMITTED BY LAW, CINCINNATI EXPRESS LLC AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR LOST PROFITS OR REVENUES, ARISING FROM YOUR USE OF THE WEBSITE. OUR TOTAL LIABILITY FOR ANY CLAIM ARISING OUT OF OR RELATING TO THE WEBSITE SHALL NOT EXCEED ONE HUNDRED U.S. DOLLARS ($100).
                                 </p>
-                                <ul>
-                                    <li>Your access to or use of (or inability to access or use) the Website</li>
-                                    <li>Any conduct or content of any third party on the Website</li>
-                                    <li>Any content obtained from the Website</li>
-                                    <li>Unauthorized access, use, or alteration of your transmissions or content</li>
-                                </ul>
 
                                 <h2 id="third-party" className="scroll-mt-28">
-                                    6. Third-Party Links
+                                    8. Third-Party Links
                                 </h2>
                                 <p>
-                                    The Website may contain links to third-party websites or services that are not owned or controlled by Cincinnati Express LLC. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You acknowledge and agree that Cincinnati Express LLC shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such websites or services.
+                                    The Website may contain links to third-party websites. Cincinnati Express LLC is not responsible for the content, security, or privacy practices of those sites. Accessing third-party links is at your own risk.
                                 </p>
 
                                 <h2 id="governing-law" className="scroll-mt-28">
-                                    7. Governing Law
+                                    9. Governing Law & Venue
                                 </h2>
                                 <p>
-                                    These Terms shall be governed by and construed in accordance with the laws of the State of Ohio, United States, without regard to its conflict of law provisions. You agree to submit to the personal and exclusive jurisdiction of the courts located in Hamilton County, Ohio for the resolution of any disputes arising out of or relating to these Terms or your use of the Website.
+                                    These Terms are governed by the laws of the State of Ohio, USA, without regard to conflict of law principles. You agree to the exclusive jurisdiction and venue of the state and federal courts located in Hamilton County, Ohio for any dispute arising from these Terms or your use of the Website.
                                 </p>
 
                                 <h2 id="changes" className="scroll-mt-28">
-                                    8. Changes to Terms
+                                    10. Changes to Terms
                                 </h2>
                                 <p>
-                                    We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion. By continuing to access or use our Website after those revisions become effective, you agree to be bound by the revised terms.
+                                    We may update these Terms from time to time. Material changes will be indicated by updating the “Last updated” date at the top of this page. Your continued use of the Website after changes become effective constitutes acceptance of the revised Terms.
                                 </p>
 
                                 <h2 id="contact" className="scroll-mt-28">
-                                    9. Contact Us
+                                    11. Contact Us
                                 </h2>
                                 <p>
-                                    If you have any questions about these Terms of Service, please contact us:
+                                    For questions about these Terms, contact us:
                                 </p>
                                 <ul>
-                                    <li><strong>Company:</strong> Cincinnati Express LLC</li>
+                                    <li><strong>Company:</strong> CINCINNATI EXPRESS LLC</li>
                                     <li><strong>USDOT:</strong> 4377740</li>
-                                    <li><strong>MC Number:</strong> MC-1715581</li>
-                                    <li><strong>Address:</strong> 12132 S Pine Dr Apt 242, Sharonville, OH 45241, USA</li>
+                                    <li><strong>MC:</strong> MC-1715581</li>
+                                    <li><strong>Address:</strong> 12132 S PINE DR APT 242, SHARONVILLE, OH 45241, USA</li>
                                     <li><strong>Phone:</strong> (513) 908-9066</li>
                                     <li><strong>Email:</strong> contact@cincinnatiexpressllc.com</li>
                                 </ul>
@@ -182,7 +186,7 @@ const Terms = () => {
                                 </p>
                                 <div className="space-y-2 text-sm">
                                     <Link
-                                        to="/privacy"
+                                        to="/privacy-policy"
                                         className="block text-primary hover:underline"
                                     >
                                         Privacy Policy
@@ -221,8 +225,8 @@ const Terms = () => {
                                     <div className="flex items-start gap-2">
                                         <MapPin className="h-4 w-4 text-muted-foreground mt-0.5" />
                                         <span className="text-muted-foreground">
-                                            12132 S Pine Dr Apt 242<br />
-                                            Sharonville, OH 45241
+                                            12132 S PINE DR APT 242<br />
+                                            SHARONVILLE, OH 45241
                                         </span>
                                     </div>
                                 </div>

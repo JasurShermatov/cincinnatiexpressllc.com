@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
       <SEO
         title="Privacy Policy | Cincinnati Express LLC"
         description="Learn how Cincinnati Express LLC collects, uses, and protects your personal information. Read our privacy practices and your rights."
-        canonical={`${siteUrl}/privacy`}
+        canonical={`${siteUrl}/privacy-policy`}
       />
 
       {/* Hero */}
@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
               Privacy Policy
             </h1>
             <p className="text-muted-foreground text-lg">
-              Last updated: January 19, 2026
+              Last updated: January 20, 2026
             </p>
           </div>
         </div>
@@ -72,6 +72,7 @@ const PrivacyPolicy = () => {
                   <li><strong>Contact Information:</strong> Name, email address, phone number, and company name when you submit our contact form or request a quote</li>
                   <li><strong>Communications:</strong> Messages, inquiries, and other content you submit through our contact form</li>
                   <li><strong>Shipping Information:</strong> Pickup/delivery locations, cargo details, and timeline requirements when requesting quotes</li>
+                  <li><strong>SMS Consent Records:</strong> Your SMS opt-in choice, consent text version, timestamp, page URL, and (when available) IP address to document consent</li>
                 </ul>
                 <h3>Information Collected Automatically</h3>
                 <ul>
@@ -106,7 +107,7 @@ const PrivacyPolicy = () => {
                   <li><strong>Business Transfers:</strong> In connection with any merger, acquisition, or sale of company assets, with appropriate notice</li>
                 </ul>
                 <p className="mt-4 p-4 bg-accent/30 rounded-lg">
-                  <strong>Phone Number Protection:</strong> Phone numbers collected through our contact form are used solely to respond to your inquiries and provide customer service. We do not share, sell, or rent phone numbers to third parties for marketing purposes.
+                  <strong>Phone & SMS Protection:</strong> Phone numbers and SMS consent are collected solely to provide quotes, service updates, and customer support. SMS consent and phone numbers will not be shared or sold to third parties for marketing purposes.
                 </p>
 
                 <h2 id="retention" className="scroll-mt-28">
@@ -117,7 +118,7 @@ const PrivacyPolicy = () => {
                 </p>
                 <ul>
                   <li><strong>Contact form submissions:</strong> Up to 3 years for customer service and business records</li>
-                  <li><strong>Quote requests:</strong> Up to 5 years for business and legal compliance purposes</li>
+                  <li><strong>Quote requests and SMS consent logs:</strong> Up to 5 years for business and legal compliance purposes</li>
                   <li><strong>Website usage data:</strong> Up to 26 months for analytics purposes</li>
                 </ul>
                 <p>
@@ -193,7 +194,7 @@ const PrivacyPolicy = () => {
                   <li><strong>Company:</strong> Cincinnati Express LLC</li>
                   <li><strong>USDOT:</strong> 4377740</li>
                   <li><strong>MC Number:</strong> MC-1715581</li>
-                  <li><strong>Address:</strong> 12132 S Pine Dr Apt 242, Sharonville, OH 45241, USA</li>
+                  <li><strong>Address:</strong> 12132 S PINE DR APT 242, SHARONVILLE, OH 45241, USA</li>
                   <li><strong>Phone:</strong> (513) 908-9066</li>
                   <li><strong>Email:</strong> contact@cincinnatiexpressllc.com</li>
                 </ul>

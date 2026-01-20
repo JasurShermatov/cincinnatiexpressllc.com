@@ -13,6 +13,7 @@ import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/privacy";
 import Terms from "./pages/Terms";
+import SmsTerms from "./pages/SmsTerms";
 import Cookies from "./pages/Cookies";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -35,8 +36,10 @@ const App = () => (
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
+              <Route path="/sms-terms" element={<SmsTerms />} />
               <Route path="/cookies" element={<Cookies />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

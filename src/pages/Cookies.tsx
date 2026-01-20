@@ -48,7 +48,7 @@ const Cookies = () => {
                         <CardContent className="p-6 md:p-10">
                             <div className="prose prose-slate dark:prose-invert max-w-none">
                                 <p className="text-base leading-7">
-                                    This Cookie Policy explains how Cincinnati Express LLC ("we", "our", or "us") uses cookies and similar technologies when you visit our website at cincinnatiexpressllc.com. This policy should be read alongside our <Link to="/privacy" className="text-primary hover:underline">Privacy Policy</Link>.
+                                    This Cookie Policy explains how Cincinnati Express LLC ("we", "our", or "us") uses cookies and similar technologies when you visit our website at cincinnatiexpressllc.com. This policy should be read alongside our <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>.
                                 </p>
 
                                 <h2 id="what-are-cookies" className="scroll-mt-28">
@@ -194,7 +194,7 @@ const Cookies = () => {
                                 </div>
                                 <div className="space-y-2 text-sm">
                                     <Link
-                                        to="/privacy"
+                                        to="/privacy-policy"
                                         className="block text-primary hover:underline"
                                     >
                                         Privacy Policy
@@ -203,12 +203,11 @@ const Cookies = () => {
                                         to="/terms"
                                         className="block text-primary hover:underline"
                                     >
-                                        Terms of Service
+                                        Terms & Conditions
                                     </Link>
                                 </div>
                             </CardContent>
                         </Card>
-
                         <Card>
                             <CardContent className="p-6">
                                 <div className="flex items-center gap-3 mb-3">
